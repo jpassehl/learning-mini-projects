@@ -1,0 +1,31 @@
+# Node / React
+node_modules/
+dist/
+build/
+*.log
+.env
+.DS_Store
+
+# Vite
+*.local
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pidb
+*.pdb
+*.dll
+*.exe
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db

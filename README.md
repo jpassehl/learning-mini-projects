@@ -2,9 +2,7 @@
 
 A collection of mini-projects I built to practice specific coding concepts.
 
-```text
 ৻( ^ᴗ^ ৻)• *✰ ✧ building to learn
-```
 
 ---
 

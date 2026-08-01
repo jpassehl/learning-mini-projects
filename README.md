@@ -38,9 +38,9 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| # | Project                           | Concept(s)                                                                   | Status     |
-|---|-----------------------------------|------------------------------------------------------------------------------|------------|
-| 1 | useCallback & Reference Stability | Reference stability, React.memo, useCallback, stale closures, infinite loops | 🚧 Planned |
+| # | Project                              | Concept(s)                                                                 | Status     |
+|---|--------------------------------------|----------------------------------------------------------------------------|------------|
+| 1 | Destructuring — Objects & Arrays     | Object/array destructuring, missing keys, rest/spread, optional chaining   | 🚧 Planned |
 
 ### ⚙️ Backend (.NET / C#)
 

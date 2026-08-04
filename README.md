@@ -4,6 +4,9 @@ A collection of mini-projects I built to practice specific coding concepts.
 
 ৻( ^ᴗ^ ৻)• *✰ ✧ building to learn
 
+> [!NOTE]
+> This repo uses a single main branch. Each mini-project is developed and committed directly to main to keep the focus on learning concepts rather than git administration.
+
 ---
 
 ## 💭 Why This Repo Exists

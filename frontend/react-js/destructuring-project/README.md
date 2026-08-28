@@ -7,7 +7,7 @@ A focused React + TypeScript practice project that isolates JavaScript destructu
 
 ## 🎯 What This Project Practices
 
-This project exercises four closely related JavaScript operations in one cohesive flow:
+This project exercises closely related JavaScript operations in one cohesive flow:
 
 | Concept                              | What You'll Observe                                                            |
 | :----------------------------------- | :----------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser. The app renders a product card that demonstrates all four destructuring forms in sequence.
+Open `http://localhost:5173` in your browser. The app renders a product card that demonstrates each destructuring form in sequence.
 
 ---
 
@@ -83,7 +83,7 @@ const { name, price: displayPrice, category } = product
 
 ### Array Destructuring
 
-Array destructuring takes values friom an array and assigns them to variables based on their _position_ (index)
+Array destructuring takes values from an array and assigns them to variables based on their _position_ (index)
 
 ```tsx
 function App() {
@@ -91,7 +91,8 @@ function App() {
     // other properties....
     ratings: [4.8, 4.6, 4.1],
   }
-  const [topRating, secondRating] = ratings // array destructuring
+  const { ratings } = product // step 1 — destructure ratings out of the object
+  const [firstRating, secondRating] = ratings // step 2 — destructure by position
 }
 ```
 
@@ -100,13 +101,13 @@ function App() {
 
 ```tsx
 const ratings = product.ratings
-const topRating = ratings[0]
+const firstRating = ratings[0]
 const secondRating = ratings[1]
 ```
 
 | Position | Value | Assigned To  |
 | -------- | ----- | ------------ |
-| Index 0  | 4.8   | topRating    |
+| Index 0  | 4.8   | firstRating  |
 | Index 1  | 4.6   | secondRating |
 | Index 2  | 4.1   | Not Assigned |
 

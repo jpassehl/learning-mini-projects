@@ -41,9 +41,9 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| #   | Project                          | Concept(s)                                                               | Status         |
-| --- | -------------------------------- | ------------------------------------------------------------------------ | -------------- |
-| 1   | Destructuring — Objects & Arrays | Object/array destructuring, missing keys, rest/spread, optional chaining | 🛠️ In progress |
+| #   | Project                          | Concept(s)                                                                                   | Status         |
+| --- | -------------------------------- | -------------------------------------------------------------------------------------------- | -------------- |
+| 1   | Destructuring — Objects & Arrays | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | 🛠️ In progress |
 
 ### ⚙️ Backend (.NET / C#)
 
@@ -57,7 +57,7 @@ Each project:
 
 Each project folder contains:
 
-- README.md — the full project outline, including learning entries, outline, challenge, and verification
+- README.md — project notes including key observations made during the project and any design principles observed
 - src/ — the actual code
 - package.json / .csproj — build configuration
 
@@ -70,7 +70,7 @@ The project README.md is the guide. The code is the implementation.
 ### React projects
 
 ```bash
-cd frontend/react/<project-name>
+cd frontend/react-js/<project-name>
 npm install
 npm run dev
 ```

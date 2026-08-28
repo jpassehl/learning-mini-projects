@@ -18,7 +18,7 @@ function App() {
   }
 
   const { name, price: displayPrice, category, ratings } = product
-  const [firstRating, secondRating] = ratings // array destructuring — index 0 → topRating, 1 → secondRating
+  const [firstRating, secondRating] = ratings // array destructuring — index 0 → firstRating, 1 → secondRating
 
   return (
     <div>

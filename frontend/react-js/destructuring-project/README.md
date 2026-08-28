@@ -3,22 +3,22 @@
 A focused React + TypeScript practice project that isolates JavaScript destructuring, rest/spread, and optional chaining.
 
 > **Status:** 🛠️ In-Progress  
-> **Concept:** Frontend (React / TypeScript)  
+> **Concept:** Frontend (React / TypeScript)
 
 ## 🎯 What This Project Practices
 
 This project exercises four closely related JavaScript operations in one cohesive flow:
 
-| Concept | What You'll Observe |
-| :--- | :--- |
-| **Object destructuring** | Pulling `name`, `price`, and `category` from a product object |
-| **The silent `undefined` bug** | Misspelling a key (`catagory`) and watching it render blank |
+| Concept                              | What You'll Observe                                                            |
+| :----------------------------------- | :----------------------------------------------------------------------------- |
+| **Object destructuring**             | Pulling `name`, `price`, and `category` from a product object                  |
+| **The silent `undefined` bug**       | Misspelling a key (`catagory`) and watching it render blank                    |
 | **Renaming at the destructure site** | `price: displayPrice` — keeping the object key but changing the local variable |
-| **Array destructuring** | Extracting the top two ratings from a `ratings` array |
-| **Rest/spread (`...rest`)** | Building an `ActionButton` wrapper that forwards all native button props |
-| **The missing-prop bug** | Pulling `onClick` out of `rest` but forgetting to pass it to the button |
-| **Optional chaining (`?.`)** | Safely accessing `product.details?.tagline` without crashing on `null` |
-| **Nullish coalescing (`??`)** | Providing fallback text when a value is `null` or `undefined` |
+| **Array destructuring**              | Extracting the top two ratings from a `ratings` array                          |
+| **Rest/spread (`...rest`)**          | Building an `ActionButton` wrapper that forwards all native button props       |
+| **The missing-prop bug**             | Pulling `onClick` out of `rest` but forgetting to pass it to the button        |
+| **Optional chaining (`?.`)**         | Safely accessing `product.details?.tagline` without crashing on `null`         |
+| **Nullish coalescing (`??`)**        | Providing fallback text when a value is `null` or `undefined`                  |
 
 ## 🧠 Why These Concepts Are Combined
 
@@ -51,7 +51,64 @@ Open `http://localhost:5173` in your browser. The app renders a product card tha
 
 ## 🔍 Key Observations Made During This Project
 
-// TODO
+### Object Destructuring
+
+Object destructuring is a one-line syntax for pulling values out of an object and into a local named variables.
+_Note that when you destructure an object, the variable names put inside the `{}` brackets must match the object's keys
+**exactly**_ or else you'd get a `TS2339` error (property `'x'` does not exist on type `'y'`) in Typescript.
+
+example:
+
+```tsx
+const { name, price, category } = product
+```
+
+> [!NOTE]
+> this is also functionally the same as the following
+
+```tsx
+const name = product.name
+const price = product.price
+const category = product.category
+```
+
+#### Destructuring Renaming
+
+The syntax for assigning a key's value to a differently named local variable
+
+```tsx
+const { name, price: displayPrice, category } = product
+//           ^^^^^^^^^^^^^^^^^^^^ - read the `price` key and store it's value in a variable named displayPrice
+```
+
+### Array Destructuring
+
+Array destructuring takes values friom an array and assigns them to variables based on their _position_ (index)
+
+```tsx
+function App() {
+  const product = {
+    // other properties....
+    ratings: [4.8, 4.6, 4.1],
+  }
+  const [topRating, secondRating] = ratings // array destructuring
+}
+```
+
+> [!NOTE]
+> this is also functionally the same as the following
+
+```tsx
+const ratings = product.ratings
+const topRating = ratings[0]
+const secondRating = ratings[1]
+```
+
+| Position | Value | Assigned To  |
+| -------- | ----- | ------------ |
+| Index 0  | 4.8   | topRating    |
+| Index 1  | 4.6   | secondRating |
+| Index 2  | 4.1   | Not Assigned |
 
 ## 🧩 SOLID Principle Applied
 
@@ -65,4 +122,4 @@ Open `http://localhost:5173` in your browser. The app renders a product card tha
 
 . ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.
 
-*"The expert in anything was once a beginner."* 🌠
+_"The expert in anything was once a beginner."_ 🌠

@@ -2,7 +2,7 @@
 
 A collection of mini-projects I built to practice specific coding concepts.
 
-৻( ^ᴗ^ ৻)• *✰ ✧ building to learn
+৻( ^ᴗ^ ৻)• \*✰ ✧ building to learn
 
 > [!NOTE]
 > This repo uses a single main branch. Each mini-project is developed and committed directly to main to keep the focus on learning concepts rather than git administration.
@@ -31,7 +31,7 @@ Each project:
 ![.NET](https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
 | Area     | Tools                       |
-|----------|-----------------------------|
+| -------- | --------------------------- |
 | Frontend | React, TypeScript, Vite     |
 | Backend  | .NET C#, EF Core (optional) |
 
@@ -41,15 +41,15 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| # | Project                              | Concept(s)                                                                 | Status     |
-|---|--------------------------------------|----------------------------------------------------------------------------|------------|
-| 1 | Destructuring — Objects & Arrays     | Object/array destructuring, missing keys, rest/spread, optional chaining   | 🚧 Planned |
+| #   | Project                          | Concept(s)                                                               | Status         |
+| --- | -------------------------------- | ------------------------------------------------------------------------ | -------------- |
+| 1   | Destructuring — Objects & Arrays | Object/array destructuring, missing keys, rest/spread, optional chaining | 🛠️ In progress |
 
 ### ⚙️ Backend (.NET / C#)
 
-| # | Project       | Concept(s) | Status     |
-|---|---------------|------------|------------|
-| — | (Coming soon) | —          | 🚧 Planned |
+| #   | Project       | Concept(s) | Status     |
+| --- | ------------- | ---------- | ---------- |
+| —   | (Coming soon) | —          | 🚧 Planned |
 
 ---
 
@@ -87,9 +87,9 @@ dotnet run
 ## 🔑 Status Key
 
 | Icon | Meaning                |
-|------|------------------------|
+| ---- | ---------------------- |
 | ✅   | Complete               |
-| 🔄   | In progress            |
+| 🛠️   | In progress            |
 | 🚧   | Planned                |
 | ❌   | Abandoned / superseded |
 
@@ -105,7 +105,7 @@ dotnet run
 
 . ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.
 
-*"The expert in anything was once a beginner."* 🌠
+_"The expert in anything was once a beginner."_ 🌠
 
 ---
 

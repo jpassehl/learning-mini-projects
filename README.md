@@ -18,7 +18,6 @@ Each project:
 - 🎯 Focuses on one specific concept or a small set of tightly related concepts
 - 🔨 Has a deliberately broken state first, then fixes it
 - 👀 Includes observable outputs (console logs, rendered values) so I can verify it works
-- 📐 Follows a consistent structure (outline, challenge, verification)
 
 ---
 
@@ -92,14 +91,6 @@ dotnet run
 | 🛠️   | In progress            |
 | 🚧   | Planned                |
 | ❌   | Abandoned / superseded |
-
----
-
-## 📝 Notes to Self
-
-- 🧩 Every project should be self-contained — no shared dependencies between projects
-- 🐛 Each project README.md must include the broken-state symptom you observed before fixing it
-- ✨ The challenge section is optional but encouraged — it stretches the concept just beyond the outline
 
 ---
 

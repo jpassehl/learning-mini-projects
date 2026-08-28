@@ -111,4 +111,4 @@ _"The expert in anything was once a beginner."_ 🌠
 
 ## 📄 License
 
-This repo is for personal learning. All code is my own work, written by me following the project outlines.
+This repo is for personal learning only. All code is my own work, written by me.

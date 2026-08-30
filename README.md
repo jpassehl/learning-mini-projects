@@ -40,9 +40,9 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| #   | Project                                                                                    | Concept(s)                                                                                   | Status |
-| --- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------ |
-| 1   | [destructuring-theme-project](js-react/foundational/destructuring-theme-project/README.md) | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | ✅     |
+| #   | Project                                                                        | Concept(s)                                                                                   | Status |
+| --- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------ |
+| 1   | [destructuring-project](js-react/foundational/destructuring-project/README.md) | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | ✅     |
 
 ### ⚙️ Backend (.NET / C#)
 

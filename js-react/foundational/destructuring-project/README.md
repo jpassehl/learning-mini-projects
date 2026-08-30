@@ -36,7 +36,7 @@ These entries all describe the same root operation — reaching into a JavaScrip
 
 ```bash
 # Navigate to the project
-cd destructuring-theme-project
+cd destructuring-project
 
 # Install dependencies
 npm install

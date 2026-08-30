@@ -40,9 +40,10 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| #   | Project                                                                        | Concept(s)                                                                                   | Status |
-| --- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------ |
-| 1   | [destructuring-project](js-react/foundational/destructuring-project/README.md) | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | ✅     |
+| #   | Project                                                                                                      | Concept(s)                                                                                   | Status |
+| --- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------ |
+| 1   | [destructuring-project](js-react/foundational/destructuring-project/README.md)                               | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | ✅     |
+| 2   | [truthy-falsy-array-iteration-project](js-react/foundational/truthy-falsy-array-iteration-project/README.md) | Truthy/falsy, `.filter(Boolean)`, `.some()`, `.filter()`, `.find()`, `.every()`, `.map()`    | 🚧     |
 
 ### ⚙️ Backend (.NET / C#)
 

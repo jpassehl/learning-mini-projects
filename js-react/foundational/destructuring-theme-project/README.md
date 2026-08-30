@@ -2,7 +2,7 @@
 
 A focused React + TypeScript practice project that isolates JavaScript destructuring, rest/spread, and optional chaining.
 
-> **Status:** 🛠️ In-Progress  
+> **Status:** ✅ Complete
 > **Concept:** Frontend (React / TypeScript)
 
 ## 🎯 What This Project Practices
@@ -36,7 +36,7 @@ These entries all describe the same root operation — reaching into a JavaScrip
 
 ```bash
 # Navigate to the project
-cd destructuring-project
+cd destructuring-theme-project
 
 # Install dependencies
 npm install

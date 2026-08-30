@@ -29,10 +29,10 @@ Each project:
 ![C#](https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
-| Area     | Tools                       |
-| -------- | --------------------------- |
-| Frontend | React, TypeScript, Vite     |
-| Backend  | .NET C#, EF Core (optional) |
+| Area     | Tools                   |
+| -------- | ----------------------- |
+| Frontend | React, TypeScript, Vite |
+| Backend  | .NET C#, EF Core        |
 
 ---
 
@@ -40,15 +40,24 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| #   | Project                     | Concept(s)                                                                                   | Status         |
-| --- | --------------------------- | -------------------------------------------------------------------------------------------- | -------------- |
-| 1   | destructuring-theme-project | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | 🛠️ In progress |
+| #   | Project                                                                                    | Concept(s)                                                                                   | Status |
+| --- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------ |
+| 1   | [destructuring-theme-project](js-react/foundational/destructuring-theme-project/README.md) | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | ✅     |
 
 ### ⚙️ Backend (.NET / C#)
 
 | #   | Project       | Concept(s) | Status     |
 | --- | ------------- | ---------- | ---------- |
 | —   | (Coming soon) | —          | 🚧 Planned |
+
+### 🔑 Status Key
+
+| Icon | Meaning                |
+| ---- | ---------------------- |
+| ✅   | Complete               |
+| 🛠️   | In progress            |
+| 🚧   | Planned                |
+| ❌   | Abandoned / superseded |
 
 ---
 
@@ -80,17 +89,6 @@ npm run dev
 cd dotnet-csharp/foundational/<project-name>
 dotnet run
 ```
-
----
-
-## 🔑 Status Key
-
-| Icon | Meaning                |
-| ---- | ---------------------- |
-| ✅   | Complete               |
-| 🛠️   | In progress            |
-| 🚧   | Planned                |
-| ❌   | Abandoned / superseded |
 
 ---
 

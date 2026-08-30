@@ -8,12 +8,14 @@ build/
 
 # Vite
 *.local
+.vite/
 
 # .NET
 bin/
 obj/
 *.user
 *.suo
+.vs/
 *.cache
 *.pidb
 *.pdb

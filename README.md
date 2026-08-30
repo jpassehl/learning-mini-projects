@@ -40,9 +40,9 @@ Each project:
 
 ### 🖥️ Frontend (React / TypeScript)
 
-| #   | Project                          | Concept(s)                                                                                   | Status         |
-| --- | -------------------------------- | -------------------------------------------------------------------------------------------- | -------------- |
-| 1   | Destructuring — Objects & Arrays | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | 🛠️ In progress |
+| #   | Project                     | Concept(s)                                                                                   | Status         |
+| --- | --------------------------- | -------------------------------------------------------------------------------------------- | -------------- |
+| 1   | destructuring-theme-project | Object/array destructuring, missing keys, rest/spread, optional chaining, nullish coalescing | 🛠️ In progress |
 
 ### ⚙️ Backend (.NET / C#)
 
@@ -69,7 +69,7 @@ The project README.md is the guide. The code is the implementation.
 ### React projects
 
 ```bash
-cd frontend/react-js/<project-name>
+cd js-react/foundational/<project-name>
 npm install
 npm run dev
 ```
@@ -77,7 +77,7 @@ npm run dev
 ### C# projects
 
 ```bash
-cd backend/dotnet/<project-name>
+cd dotnet-csharp/foundational/<project-name>
 dotnet run
 ```
 

@@ -53,12 +53,12 @@ Open `http://localhost:5173` in your browser. The app renders a product card tha
 
 ### Object Destructuring
 
-Object destructuring is a one-line syntax for pulling values out of an object and into a local named variables.
+Object destructuring is a one-line syntax for pulling values out of an object and into local named variables.
 _Note that when you destructure an object, the variable names put inside the `{}` brackets must match the object's keys
-**exactly**_ or else you'd get a `TS2339` error (property `'x'` does not exist on type `'y'`) in Typescript.
+**exactly**_ or else you'd get a `TS2339` error (property `'x'` does not exist on type `'y'`) in TypeScript.
 
 > [!IMPORTANT]
-> _In a Javascript object, a key is the label on the left-side of each {`key`:`value`} pair_
+> _In a JavaScript object, a key is the label on the left-side of each {`key`:`value`} pair_
 
 example:
 
@@ -69,8 +69,7 @@ function App() {
   const { name, price, category } = product // Object destructuring - keys are `name`, `price`, and `category`
 ```
 
-> [!NOTE]
-> this is also functionally the same as the following;
+_Equivalent without destructuring syntax:_
 
 ```tsx
 const name = product.name
@@ -84,7 +83,7 @@ The syntax for assigning a key's value to a differently named local variable
 
 ```tsx
 const { name, price: displayPrice, category } = product
-//           ^^^^^^^^^^^^^^^^^^^^ - read the `price` key and store it's value in a variable named displayPrice
+//           ^^^^^^^^^^^^^^^^^^^^ - read the `price` key and store its value in a variable named displayPrice
 ```
 
 ### Array Destructuring
@@ -103,8 +102,7 @@ function App() {
 }
 ```
 
-> [!NOTE]
-> this is also functionally the same as the following;
+_Equivalent without destructuring syntax:_
 
 ```tsx
 const ratings = product.ratings
@@ -153,7 +151,7 @@ const [topRating, , thirdRating] = ratings // topRating = 4.8, thirdRating = 4.1
 
 ### Rest Syntax and Spread Syntax
 
-Rest and spread are two sides of the same coin. Rest syntax `(...rest)` collects all props not explicitly named into a single variable at the destructuring site; spread syntax `({...rest})` expands that variable back out into a receiving element. Together, they let a component pass through to the underlying element without having to explicitly name each one.
+Rest and spread are two sides of the same coin. Rest syntax `{ ...rest }` collects all props not explicitly named into a single variable at the destructuring site; spread syntax `{...rest}` expands that variable back out into a receiving element. Together, they let a component pass through to the underlying element without having to explicitly name each one.
 
 | Syntax   | What It Does                                                                 | Where it appears                                                                                    |
 | -------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -218,17 +216,18 @@ console.log(fruits) // logs: ['apple', 'banana', 'orange'] - (the array itself)
 
 //with SPREAD
 
-console.log(...fruits) // logs: apple banana orange - unpacked the array into seperate log elements
+console.log(...fruits) // logs: apple banana orange - unpacked the array into separate log elements
 ```
 
 ### Optional Chaining
 
-In React and Javascript, optional chaining, (`?.`) is a safe way to **access deeply nested object properties, arrays, or functions without casuing a runtime crash** if an intermediate value is `null` or `undefined`. → Instead of throwing a "_cannot read properties of null error_", the expression short-ciruits & immediately returns `undefined`"
+In React and JavaScript, optional chaining, (`?.`) is a safe way to **access deeply nested object properties, arrays, or functions without causing a runtime crash** if an intermediate value is `null` or `undefined`. → Instead of throwing a "_cannot read properties of null error_", the expression short-circuits & immediately returns `undefined`"
 
 ```tsx
 const product = {
  // other properties....
-  details: null as ProductDetails | null,
+
+details: null as ProductDetails | null
 }
 //...
 
@@ -236,8 +235,31 @@ const product = {
 // `TS2531 error` - 'product.details' is possibly null. In plain Javascript this crashes at runtime with TypeError: cannot read properties of null
 ```
 
-optional chaining is a safety gate. It looks like this : `?.` so you'd write something like:
-`<p>{product.details?.tagline}</p>`
+Optional chaining is essentially a safety gate. It looks like this : `?.` so you'd write this instead:
+
+```tsx
+<p>{product.details?.tagline}</p>
+// if `product.details` is null or undefined - returns undefined
+// (before even evaluating the value of `tagline`).
+```
+
+#### Brief Aside: Type Assertion in TypeScript & Union Types
+
+Type assertion in TypeScript is a mechanism that tells the compiler to treat a value as a specific type, effectively overriding its built-in type inference.
+
+A union type in TypeScript allows a variable, function parameter, or return value to hold one of several specified types. It acts like a logical OR, meaning the value can be Type A, or Type B.
+
+```tsx
+const unknownValue: unknown = 'Hello World' //declares variable named unknownValue w/ type `unknown`
+const strLength: number = (unknownValue as string).length // assign unknown to string
+
+/*
+* so from the above code snippet, this is setting the details property initial value to `null`
+and then `ProductDetails | null` is a union type, so we're telling the compiler to treat it as
+* `ProductDetails` OR `null` 
+*/
+details: null as ProductDetails | null
+```
 
 ### Nullish Coalescing
 
@@ -257,9 +279,9 @@ value ?? fallback
 ```tsx
 <p>{product.details?.tagline ?? 'No tagline available'}</p>
 /* javascript checks product.details, sees details is null
-   optional cahining (?.) kciks in: "I can't go further - return undefined"
-   the ?? operator recieves undefined and says "That's a nulish value. Give me the fallback
-   the UI renders: "No tagline availalbe"*/
+   optional chaining (?.) kicks in: "I can't go further - return undefined"
+   the ?? operator receives undefined and says "That's a nullish value. Give me the fallback"
+   the UI renders: "No tagline available" */
 ```
 
 ## 🧩 SOLID Principle Applied

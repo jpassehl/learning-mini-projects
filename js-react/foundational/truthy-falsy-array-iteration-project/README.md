@@ -1,65 +1,75 @@
-# 🃏 Truthy, Falsy, and Array Iteration — D&D Party Roster Panel
+# React + TypeScript + Vite
 
-A focused React + TypeScript practice project that isolates JavaScript truthy/falsy coercion and the four core array iteration methods.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> **Status:** 🚧 Planned
-> **Concept:** Frontend (React / TypeScript)
+Currently, two official plugins are available:
 
-## 🎯 What This Project Practices
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-This project exercises closely related JavaScript operations in one cohesive flow:
+## React Compiler
 
-| Concept                        | What You'll Observe                                                                        |
-| :----------------------------- | :----------------------------------------------------------------------------------------- |
-| **Truthy and falsy values**    | The six falsy values in JavaScript — and why `null` is falsy while `[]` is truthy          |
-| **`.filter(Boolean)`**         | Stripping `null` placeholder spell slots from a typed array in one step                    |
-| **The silent `0` bug**         | `.filter(Boolean)` drops a valid cantrip with `level: 0` — and why                         |
-| **`.some()`**                  | Replacing a `for` loop that checks whether the party has a healer                          |
-| **`.filter()`**                | Replacing a `for` loop that collects injured characters below full HP                      |
-| **`.find()`**                  | Locating the party tank by role — with `?.` to guard an undefined result                   |
-| **`.every()`**                 | Checking whether all party members are at full health, including the empty-array edge case |
-| **`.map()` and transform**     | Building party summary strings without a manual push loop                                  |
-| **Chaining `.filter().map()`** | Producing a veterans-only summary — keeping only characters above level 5                  |
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🧠 Why These Concepts Are Combined
+## Expanding the ESLint configuration
 
-These entries all describe the same fundamental activity — walking every item in an array and deciding what to do with it. Exercising them together makes it clear that choosing the right method is **choosing how to express intent**, not just how to write code. A `for` loop can do all of these at once — which is exactly the problem: one loop silently carries multiple responsibilities, and the intent stays hidden until the body is fully read.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
----
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## 🛠️ Tech Stack
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-## 🚀 Quick Start
-
-```bash
-# Navigate to the project
-cd truthy-falsy-array-iteration-project
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
 ```
 
-Open `http://localhost:5173` in your browser. The app renders a D&D party roster panel that demonstrates each array method in sequence.
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
----
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## 🔍 Key Observations Made During This Project
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-<!-- TODO -->
-
-## 🧩 SOLID Principle Applied
-
-**SRP (Single Responsibility Principle)** — each array method has exactly one responsibility. `some` asks a question. `filter` keeps items. `find` retrieves one item. `every` validates all items. `map` transforms items. A `for` loop can do all of these at once — which is exactly the problem: one loop silently carries multiple responsibilities, and the intent stays hidden until the body is fully read.
-
----
-
-. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.
-
-_"The expert in anything was once a beginner."_ 🌠
+```

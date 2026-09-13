@@ -1,4 +1,4 @@
-# 📦 Destructuring — Reaching Into Objects and Arrays
+# 📦 Destructuring & Safe Property Access
 
 A focused React + TypeScript practice project that isolates JavaScript destructuring, rest/spread, and optional chaining.
 
